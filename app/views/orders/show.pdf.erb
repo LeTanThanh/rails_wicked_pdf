@@ -13,11 +13,11 @@
 
     <tbody>
     <% @order.items.each.with_index(1) do |item, index| %>
-      <tr>
-        <td><%= index %></td>
-        <td><%= item.name %></td>
-        <td><%= number_to_currency item.price %></td>
-      </tr>
+        <tr>
+          <td><%= index %></td>
+          <td><%= item.name %></td>
+          <td><%= number_to_currency item.price %></td>
+        </tr>
     <% end %>
     <tr>
       <td colspan="2">Total price</td>
@@ -25,6 +25,4 @@
     </tr>
     </tbody>
   </table>
-
-  <%= link_to "View PDF version", order_path(@order, format: :pdf) %> or <%= link_to "Download PDF version", order_path(@order, download: true, format: :pdf) %>
 </div>
